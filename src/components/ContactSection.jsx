@@ -85,19 +85,11 @@ export default function ContactSection() {
               <Link href={'https://twitter.com/Arjitwebdev'}> <AiFillTwitterCircle className='hover:text-secondery-text-color inline-block' /></Link>
               <Link href={'https://github.com/arjitcodes'}> <AiFillGithub className='hover:text-secondery-text-color inline-block' /></Link>
             </div>
-            {/* <div className='text-2xl [&>*]:cursor-pointer text-main-text-color'>
-              <Link href={'https://www.instagram.com/arjitwebdev'}> <AiFillInstagram className='hover:text-secondery-text-color inline-block' /><p className='ml-2 hover:text-indigo-500 hover:underline text-base inline-block '>arjitweddev</p></Link>
-            </div>
-            <div className='text-2xl [&>*]:cursor-pointer text-main-text-color '>
-              <Link href={'https://twitter.com/Arjitwebdev'}> <AiFillTwitterCircle className='hover:text-secondery-text-color inline-block' /><p className='ml-2 hover:text-indigo-500 hover:underline text-base inline-block '>@Arjitwebdev</p></Link>
-            </div>
-            <div className='text-2xl [&>*]:cursor-pointer text-main-text-color '>
-              <Link href={'https://github.com/arjitcodes'}> <AiFillGithub className='hover:text-secondery-text-color inline-block' /><p className='ml-2 hover:text-indigo-500 hover:underline text-base inline-block '>arjitcodes</p></Link>
-            </div> */}
+           
           </div>
           <div className="flex flex-col space-y-5  [&>*]:px-4 [&>*]:py-[0.375rem] text-xs text-input-text-color  font-poppins bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 border border-input-border-color-1 py-6 px-4 [&>*]:placeholder-placeholder-color">
-            <input type="text" name="fullName" id="fullName" placeholder="Full Name" className="border border-input-border-color-1 bg-transparent w-[300px]" value={client.clientName} onChange={(e) => { setClient({ ...client, clientName: e.target.value }) }} />
-            <input type="email" name="email" id="email" placeholder="Your Email" className="border border-input-border-color-1 bg-transparent" value={client.email} onChange={(e) => { setClient({ ...client, email: e.target.value }) }} />
+            <input type="text" name="fullName" id="fullName" placeholder="Full Name" className="border border-input-border-color-1 bg-transparent w-[300px]" value={client.clientName} onChange={(e) => { setClient({ ...client, clientName: e.target.value }) }} inputMode='none'/>
+            <input type="email" name="email" id="email" placeholder="Your Email" className="border border-input-border-color-1 bg-transparent" value={client.email} onChange={(e) => { setClient({ ...client, email: e.target.value }) }} inputMode='email'/>
             <textarea name="message" id="message" placeholder="Type your message here" className="border border-input-border-color-1 bg-transparent h-24" value={client.message} onChange={(e) => { setClient({ ...client, message: e.target.value }) }}></textarea>
             <button type="submit" className="bg-secondery-text-color text-white" onClick={handleSendMessage}>Send message</button>
 

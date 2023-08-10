@@ -83,35 +83,35 @@ const ProjectSection = () => {
 
                     <button id='next-btn' className='hidden md:block text-main-text-color   text-base disabled:text-gray-600' onClick={handleNextProject} disabled={(counter + 1) === totalProject}><MdArrowForwardIos /></button>
                 </div>
-                <div className="sm-project w-full md:hidden overflow-x-scroll flex touch-pan-x first:pl-8  [&>*]:pr-8">
+                <div className="sm-project w-full md:hidden overflow-x-scroll flex touch-pan-x touch-pan-y first:pl-8  [&>*]:pr-8">
 
                     <div className={`project  flex-col lg:flex-row space-y-6 md:space-y-9 lg:space-y-0 lg:space-x-16 items-center justify-center w-4/5 m-auto flex flex-shrink-0 relative ml-8`}>
-                        <Link href={'/blogs/blog-using-express'}>
-                            <div className="project-img w-full relative">
-                                <div className="aspect-[4/3] w-full   relative flex justify-center items-center text-main-text-color border border-secondery-text-color">Photo will be updated soon.</div>
+                        <div className="project-img w-full relative">
+                            <div className="aspect-[4/3] w-full   relative flex justify-center items-center text-main-text-color border border-secondery-text-color">Photo will be updated soon.</div>
 
-                            </div>
-                            <div className='space-y-4 '>
+                        </div>
+                        <div className='space-y-4 '>
 
+                            <Link href={'/blogs/blog-using-express'}>
                                 <p className='text-main-text-color font-roboto text-sm md:text-lg   line-clamp-6 text-justify leading-relaxed'>
                                     &quot;The Tales of Web&quot; is a blog website that features blog posts about web development. For its development, I am using <span className='text-secondery-text-color '>Express.js</span> along with pure <span className='text-secondery-text-color '>HTML</span>, <span className='text-secondery-text-color '>CSS</span>, and <span className='text-secondery-text-color '>JS</span> . This blog <span className='text-secondery-text-color '>includes an admin dashboard</span> that facilitates adding new blogs, removing blogs, and editing existing blogs . The website is obviously <span className='text-secondery-text-color '>responsive</span> , and it also offers a <span className='text-secondery-text-color '>dark theme</span> option for a better reading experience in low-light environments.
                                 </p>
 
-                            </div>
-                        </Link>
+                            </Link>
+                        </div>
                     </div>
                     <div className={`project  flex-col lg:flex-row space-y-6 md:space-y-9 lg:space-y-0 lg:space-x-16 items-center justify-center w-4/5 m-auto flex flex-shrink-0 relative `}>
-                        <Link href={'/blogs/making-of-portfolio-website'}>
-                            <div className="project-img w-full relative">
-                                <div className="aspect-[4/3] w-full  bg-secondery-text-color relative bg-[url('/projectimgs/protfolio-img.jpg')] bg-cover bg-no-repeat bg-center "></div>
+                        <div className="project-img w-full relative">
+                            <div className="aspect-[4/3] w-full  bg-secondery-text-color relative bg-[url('/projectimgs/protfolio-img.jpg')] bg-cover bg-no-repeat bg-center "></div>
 
-                            </div>
-                            <div className='space-y-4'>
+                        </div>
+                        <div className='space-y-4'>
+                            <Link href={'/blogs/making-of-portfolio-website'}>
                                 <p className='text-main-text-color font-roboto text-sm md:text-lg   line-clamp-6 leading-relaxed'>
                                     Let&apos;s talk about this project, which is my personal portfolio website. I am using <span className='text-secondery-text-color '>React and TailwindCSS</span> for its development. The key features of this project <span className='text-secondery-text-color  '>include a blog</span>, offering <span className='text-secondery-text-color '>not only light and dark themes</span> but also the <span className='text-secondery-text-color '>ability to switch to the system default theme</span>. Additionally, it is designed to be fully responsive.
                                 </p>
-                            </div>
-                        </Link>
+                            </Link>
+                        </div>
                     </div>
 
                 </div>
