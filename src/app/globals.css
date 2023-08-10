@@ -1,27 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* :root {
+  --background-main-rgb: 248, 248, 248;
+  --text-color-main-rgb: 49, 45, 45;
+  --text-color-secondery-rgb: 236, 85, 94;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-main-rgb: 40, 40, 40;
+    --text-color-main-rgb: 245, 245, 245;
+  }
+} */
+
+@layer base {
+  :root {
+    /* --background-main-rgb: 255, 248, 229; */
+    --background-main-rgb: 255, 246, 224;
+    --text-color-main-rgb: 0, 7, 26;
+    --text-color-secondery-rgb: 33, 92, 136;
+    /* input */
+    --input-text-color: 71, 85, 105;
+    --input-border-color-1: 71 85 105;
+    --input-placeholder-color: 51 65 85;
+    /* blog */
+    --blog-main-rgb: 31, 41, 55;
+    --blog-heading-rgb: 31, 41, 55;
+    --blog-title-rgb: var(--text-color-main-rgb);
+    /* nav */
+    --nav-menu-bar-rgb: var(--text-color-main-rgb);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-main-rgb: 40, 40, 40;
+      --text-color-main-rgb: 215, 215, 215;
+      --text-color-secondery-rgb: 236, 85, 94;
+      /* input */
+      --input-text-color: 241, 245, 249;
+      --input-border-color-1: 71, 85, 105;
+      --input-placeholder-color: 131, 137, 146;
+      /* blog */
+      --blog-main-rgb: 203, 213, 225;
+      --blog-heading-rgb: 240, 244, 248;
+      --blog-title-rgb: 249, 250, 251;
+      /* nav */
+      --nav-menu-bar-rgb: var(--blog-title-rgb);
+    }
+  }
+  :root[dark-theme="dark"] {
+    --background-main-rgb: 40, 40, 40;
+    /* --text-color-main-rgb: 245, 245, 245; */
+    --text-color-main-rgb: 215, 215, 215;
+    --text-color-secondery-rgb: 236, 85, 94;
+    /* input */
+    --input-text-color: 241, 245, 249;
+    --input-border-color-1: 71, 85, 105;
+    --input-placeholder-color: 131, 137, 146;
+    /* blog */
+    --blog-main-rgb: 203, 213, 225;
+    --blog-heading-rgb: 240, 244, 248;
+    --blog-title-rgb: 249, 250, 251;
+    /* nav */
+    --nav-menu-bar-rgb: var(--blog-title-rgb);
+  }
+  :root[dark-theme="light"] {
+    /* --background-main-rgb: 245, 245, 245; */
+    --background-main-rgb: 255, 246, 224;
+    --text-color-main-rgb: 49, 45, 45;
+    --text-color-secondery-rgb: 33, 92, 136;
+    /* input */
+    --input-text-color: 71, 85, 105;
+    --input-border-color-1: 71 85 105;
+    --input-placeholder-color: 51 65 85;
+    /* blog */
+    --blog-main-rgb: 31, 41, 55;
+    --blog-heading-rgb: 31, 41, 55;
+    --blog-title-rgb: var(--text-color-main-rgb);
+    /* nav */
+    --nav-menu-bar-rgb: var(--text-color-main-rgb);
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(--background-main-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+body {
+  background: rgb(var(--background-main-rgb));
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6e6e6e;
+}
+
+.sm-project::-webkit-scrollbar {
+  display: none;
+}
+
+.sm-project {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
